@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+
+<script> 
+
+function increaseFontSizeBy1px() {
+    txt = document.getElementById('b');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    if(currentSize<100)
+        txt.style.fontSize = (currentSize + 1) + 'px';
+}
+function decreaseFontSizeBy1px() {
+    txt = document.getElementById('b');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    if(currentSize > 6)
+    txt.style.fontSize = (currentSize - 1) + 'px';
+}
+</script>
+
+<input type="button" value="+" onclick="increaseFontSizeBy1px()">
+<input type="button" value="-" onclick="decreaseFontSizeBy1px()">
+<p id="b">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa impedit obcaecati exercitationem pariatur,
+     nostrum similique nihil labore veritatis aspernatur explicabo.
+     Beatae velit aliquid ea facilis quod voluptate hic aperiam dignissimos.</p>
+
+
+</html>
