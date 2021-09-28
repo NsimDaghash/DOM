@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
   }
-  
+  /*  inputs  */
   main {
     min-height: 100vh;
     display: grid;
@@ -14,6 +14,7 @@
     border: 1px solid black;
     padding: 20px;
     width: 500px;
+    margin-bottom: 20%;
   }
   
   .inputs {
@@ -32,6 +33,11 @@
     line-height: 1;
   }
   
+  .copytext{
+    font-size: 30px;
+    text-align: center;
+  }
+
   .inputs input:hover,
   .inputs input:focus {
     border-color: #33F;

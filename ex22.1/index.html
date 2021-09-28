@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='style.css' type='text/css' />
+
+</head>
+<body>
+<h1>Registration Form</h1>
+
+<form name='registration' onSubmit="return formValidation();">
+    <div><label for="username">Name:</label></div>
+    <div><input type="text" id="name" class= "name" name="username" size="20" /></div>
+    <div><label for="username">Age:</label></div>
+    <div><input type="text" id="age" class= "age" name="userage" size="20" /></div>
+    <div><label for="email">Email:</label></div>
+    <div><input type="text" id="email" class= "email" name="email" size="20" /></div>
+    <div>
+    <span><input type="button" name="submit" id="submitbtn" class= "submitbtn" value="Submit" /></span>
+    </div>
+</form>
+<script src="index.js"></script>
+</body>
+</html>

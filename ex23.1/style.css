@@ -1,0 +1,8 @@
+#clock {
+    font-size: 5rem;
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+    border: 2px solid rgb(23, 27, 248);
+    border-radius: 20px;
+}
