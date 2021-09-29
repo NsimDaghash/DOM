@@ -18,37 +18,37 @@ const guessedLettersText= document.querySelector(`.guessedLettersText`),
  // statusText.style.color = "red";
   guessedletters.innerHTML = ("Keys guessed");
   btn.value = "?";
-
+  const regconfirmbtn = document.createElement('input');
+    regconfirmbtn.value = 'YES';
+    regconfirmbtn.type = 'button';
+    regconfirmbtn.style.marginLeft= '15px';
+    regconfirmbtn.style.marginTop = '15px';
+    regconfirmbtn.style.visibility = "hidden";
+/****************************************** */
   function playagain() { 
     statusText.innerHTML=("Right letter!"); 
-    statusText.style.color = "green";  
-    //btn.value = "?";
-    
+    statusText.style.color = "green";     
     guessedletters.innerHTML = ("would you like to play again");
     guessedLetters.splice(0, guessedLetters.length);  
-    const regconfirmbtn = document.createElement('input');
-        regconfirmbtn.value = 'YES';
-        regconfirmbtn.type = 'button';
-        regconfirmbtn.style.marginLeft= '15px';
-        regconfirmbtn.style.marginTop = '15px';
+        regconfirmbtn.style.visibility = "visible";
         regconfirmbtn.addEventListener('click',() => {
            // alert ("you have registered");
-            location.reload();
+           regconfirmbtn.style.visibility = "hidden";
+           location.reload();
         })
-        continuebt.appendChild(regconfirmbtn);
+        continuebt.appendChild(regconfirmbtn); 
 };              
-
+/************************************** */
   function updateguessedletters() { 
       guessedLettersText.innerHTML = guessedLetters;
   };
-
+/************************************** */
   document.onkeydown = function(event) {
-
+    if(regconfirmbtn.style.visibility == "hidden"){
       //validates that user guess is an alphabet letter 
       if(event.keyCode >= 65 && event.keyCode <= 90) {      
           let userGuess = event.key.toLowerCase(); 
           console.log(userGuess)
-
           //if user guesses computer guess, adds a point and resets guesses remaining
           if(userGuess === computerGuess) {
             btn.value = userGuess;
@@ -60,7 +60,6 @@ const guessedLettersText= document.querySelector(`.guessedLettersText`),
             guessedletters.innerHTML = ("Keys guessed");
             playagain();
           }
-
           // else if user guesses same letter again, will alert to enter again
           else if (guessedLetters.includes(userGuess)) {
                 statusText.innerHTML=("You have already made this guess!");
@@ -74,5 +73,9 @@ const guessedLettersText= document.querySelector(`.guessedLettersText`),
           updateguessedletters();
       } else {
           alert("Enter a valid letter");  // alerts if user guess is not a valid alphabet letter
+  }
+  }
+  else{
+    alert ("confirm Tes button to continue");
   }
 };
