@@ -1,0 +1,23 @@
+body {
+    background-image:url(./sanjeevan-satheeskumar-MG8c-4n1QVE-unsplash.jpg);
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-style: italic;
+    color: #373fff;
+    font-size: 2rem;
+  }
+  p{
+    font-size: 2rem;
+  }
+  button {
+    border-radius: 20px;
+    font-size: 2rem;
+  }
+  button:hover {
+    background-color: green;
+  }
